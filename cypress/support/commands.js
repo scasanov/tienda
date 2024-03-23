@@ -23,3 +23,22 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add("Login", (productos) => {
+  cy.request({
+    method: "POST",
+    url: "https://api.demoblaze.com/login",
+    body:{username: 1}
+  }).then((response) => {
+    expect(response.status).to.eq(200);
+  });
+});
+
+  Cypress.Commands.add("postCheckLogin", (productos) => {
+    cy.request({
+      method: "POST",
+      url: "https://api.demoblaze.com/check",
+      body:{username: 1}
+    }).then((response) => {
+      expect(response.status).to.eq(200);
+    });
+  });
