@@ -1,4 +1,4 @@
-# DesafioTecnico - Soledad Casanova 
+# Examen Técnico - Soledad Casanova 
 URL utilizada : https://www.demoblaze.com/index.html
 
 Para ejecutar el proyecto por consola 
