@@ -41,4 +41,13 @@ Cypress.Commands.add("Login", (productos) => {
     }).then((response) => {
       expect(response.status).to.eq(200);
     });
+
+    Cypress.Commands.add("postSignup", (productos) => {
+      cy.request({
+        method: "POST",
+        url: "https://api.demoblaze.com/signup",
+        body:{username: 1}
+      }).then((response) => {
+        expect(response.status).to.eq(200);
+      });
   });
